@@ -1,0 +1,31 @@
+INICIO
+	SENHA = 0;
+	FAÇA
+		ESCREVA("Possui pedido de exame? s/n: ");
+		LEIA(pedido);
+		SE(pedido == 's')
+		ENTÃO
+			SENHA = SENHA + 1;
+			ESCREVA("Sua senha é SENHA");
+			ESCREVA("Qual o tipo de exame?");
+			ESCREVA("a = Admnissional");
+			ESCREVA("d = demissional");
+			ESCREVA("p = Periódico");
+			ESCREVA("o = Outro");
+			LEIA(tipo);
+			SE(tipo == 'a')
+			ENTÃO
+				ESCREVA("Encaminhe-se para a sala 1");
+			SENÃO SE(tipo == 'd')
+			ENTÃO
+				ESCREVA("Encaminhe-se para a sala 2");
+			SENÃO SE(tipo == 'p')
+			ENTÃO
+				ESCREVA("Encaminhe-se para a sala 3");
+			SENÃO
+				ESCREVA("Encaminhe-se para a sala 4");
+			FIMSE
+		FIMSE
+	ENQUANTO(pedido == 's');
+	ESCREVA("Volte para a sua empresa.")
+FIM

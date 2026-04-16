@@ -1,0 +1,21 @@
+INÍCIO
+	VARIÁVEIS nome[20], sexo, continuar; cont = 0, m = 0, f = 0;
+	
+	FAÇA
+	
+		ESCREVA("Digite seu primeiro nome:\n");
+		LEIA(nome);
+		ESCREVA("Digite seu sexo m/f: \n");
+		LEIA(sexo);
+		cont = cont + 1;
+		ESCREVA("Você é o paciente número %d\n", cont);
+		SE(sexo == 'm') ENTÃO m = m + 1;
+		SENÃO f = f + 1;
+		FIMSE
+		ESCREVA("Mais algum paciente 's' ou 'n': ");
+		LEIA(continuar);
+	ENQUANTO(continuar == 's');
+	ESCREVA("Hoje foram atendidos %d pacientes,", cont);
+	ESCREVA(" %d do sexo masculino e %d do sexo feminino\n", m, f);
+	
+FIM
